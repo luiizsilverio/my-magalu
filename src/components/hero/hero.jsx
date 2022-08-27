@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="hero-body">
         <div className="container">
           <h1 className="hero-title">
-            Bolsas projetadas para a vida moderna.
+            Bolsas ideais para Lorem Ipsum.
           </h1>
           <div className='shop-now-btn'>
             <button className='button is-black' id='shop-now'>
