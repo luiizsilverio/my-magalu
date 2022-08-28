@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="hero-body">
         <div className="container">
           <h1 className="hero-title">
-            Bolsas ideais para Lorem Ipsum.
+            Bolsas ideais para Lorem Ipsum dolor magalum.
           </h1>
           <div className='shop-now-btn'>
             <button className='button is-black' id='shop-now'>
