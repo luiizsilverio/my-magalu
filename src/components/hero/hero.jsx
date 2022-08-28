@@ -10,7 +10,7 @@ const Hero = () => {
           </h1>
           <div className='shop-now-btn'>
             <button className='button is-black' id='shop-now'>
-              COMPRE AGORA
+              COMPRAR
             </button>
           </div>
         </div>
