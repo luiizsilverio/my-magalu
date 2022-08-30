@@ -27,6 +27,8 @@ img {
 
 .featured-collection {
   margin-top: 6rem;
+  padding: 1rem 2rem;
+  text-align: center;
 
   .featured-section-title {
     font-size: 2rem;
@@ -36,14 +38,38 @@ img {
     cursor: pointer;
   }
 
-  @media(min-width: 1024px) {
+  .products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .featured-product {
+      max-width: 40%;
+      margin: 10px;
+    }
+  }
+
+  @media(min-width: 900px) {
     .products {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
+      flex-wrap: nowrap;
       padding: 5px;
 
       .featured-product {
         margin: 10px;
+      }
+    }
+  }
+
+  @media(max-width: 670px) {
+    .products {
+
+      .featured-product {
+        max-width: 90%;
+        width: 90%;
       }
     }
   }
