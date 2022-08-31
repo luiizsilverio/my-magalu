@@ -1,11 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
+import { CartContext } from "../../context/cart-context";
 import { ProductsContext } from "../../context/products-context";
+import { isInCart } from "../../helpers";
 import Layout from "../shared/layout";
 import './single-product.styles.scss';
 
 const SingleProduct = () => {
   const { products } = useContext(ProductsContext);
+  const { addProduct, increase, cartItems } = useContext(CartContext);
   const { id } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
@@ -41,9 +44,23 @@ const SingleProduct = () => {
             <p>R$ {product.price.toFixed(2)}</p>
           </div>
           <div className="add-to-cart-btn">
-            <button className="button is-white nomad-btn" id="btn-white-outline">
-              ADICIONAR AO CARRINHO
-            </button>
+            {
+              isInCart(product, cartItems) ? (
+                <button
+                  className="button is-white nomad-btn"
+                  id="btn-white-outline"
+                  onClick={() => increase(product)}
+                >ADICIONAR MAIS
+                </button>
+              ) : (
+                <button
+                  className="button is-white nomad-btn"
+                  id="btn-white-outline"
+                  onClick={() => addProduct(product)}
+                >ADICIONAR AO CARRINHO
+                </button>
+              )
+            }
             <button className="button is-black nomad-btn" id="btn-white-outline">
               FECHAR O PEDIDO
             </button>
