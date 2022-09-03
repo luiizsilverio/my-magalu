@@ -1,12 +1,17 @@
 import { createContext, useReducer } from "react";
-import cartReducer from "./cart-reducer";
+import cartReducer, { sumItems } from "./cart-reducer";
 
 export const CartContext = createContext();
 
+const  cartFromStorage = localStorage.getItem('mymagalu.cart') ?
+  JSON.parse(localStorage.getItem('mymagalu.cart')) : [];
+
+const totCart = sumItems(cartFromStorage);
+
 const initialState = {
-  cartItems: [],
-  itemCount: 0,
-  total: 0
+  cartItems: cartFromStorage,
+  itemCount: totCart.itemCount,
+  total: totCart.total
 }
 
 const CartContextProvider = ({ children }) => {
