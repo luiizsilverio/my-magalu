@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
+import { CartContext } from "../../../context/cart-context";
 
 const Total = ({ itemCount, total }) => {
   const navigate = useNavigate();
+  const { clearCart } = useContext(CartContext);
 
   return (
     <div className="total-container">
@@ -15,7 +18,7 @@ const Total = ({ itemCount, total }) => {
         >COMPRAR
         </button>
         <button className="button btn-white-outline"
-          onClick={() => {}}
+          onClick={clearCart}
         >LIMPAR
         </button>
       </div>
