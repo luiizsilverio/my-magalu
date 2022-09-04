@@ -1,0 +1,52 @@
+.checkout {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 1rem;
+
+  h4 {
+    margin: 0;
+    margin: 1rem;
+  }
+
+  button {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  @media (max-width: 600px) {
+    width: 80%;
+  }
+
+  .stripe-card {
+    margin: 1rem 0;
+  }
+
+  .card-number {
+    margin-top: 2rem;
+  }
+
+  .card-element {
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 10px;
+    width: 55%;
+    margin: 0 auto;
+  }
+
+  .error {
+    border: 1px solid red;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 1.5rem;
+  }
+}

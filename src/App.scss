@@ -109,11 +109,14 @@ img {
 form {
   padding: 2rem;
   text-align: center;
+
+  /*
   input[type=text],
   input[type=email],
   input[type=password]{
     width: 60%;
   }
+  */
 
   .submit-btn {
     display: flex;

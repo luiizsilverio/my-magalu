@@ -4,7 +4,7 @@ import { CartContext } from "../../../context/cart-context";
 import './cart-page.styles.scss';
 
 const CartItem = (product) => {
-  const { title, imageUrl, price, quantity, id, description } = product;
+  const { title, imageUrl, price, quantity } = product;
   const { increase, decrease, removeProduct } = useContext(CartContext);
 
   return (

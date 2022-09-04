@@ -4,12 +4,15 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: './.env.local' });
 
-const app = express();
+const createCheckoutSession = require('./api/checkout');
 
+const app = express();
 app.use(express.json());
 app.use(cors({ origin: true }));
 
 app.get('/', (req, res) => res.send('Hello My-Magalu!'))
+
+app.post('/create-checkout-session', createCheckoutSession);
 
 const port = process.env.PORT || 5000;
 
