@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from "../../../context/cart-context";
+import './cart-page.styles.scss';
 
 const Total = ({ itemCount, total }) => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ const Total = ({ itemCount, total }) => {
         <p>Total de Itens: &nbsp; <span>{itemCount}</span></p>
         <p>Valor Total: &nbsp; <span>R$ {total.toFixed(2)}</span></p>
       </div>
-      <div className="checkout">
+      <div className="total-checkout">
         <button className="button is-black"
           onClick={() => navigate('/checkout')}
         >COMPRAR
