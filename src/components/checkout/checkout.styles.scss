@@ -3,7 +3,7 @@
   margin: 0 auto;
   text-align: center;
   border: 1px solid #ccc;
-  padding-bottom: 1rem;
+  padding: 1rem;
 
   h4 {
     margin: 0;
@@ -13,6 +13,16 @@
   button {
     width: 200px;
     margin: 0 auto;
+  }
+
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: darkblue;
+  }
+
+  @media (max-width: 600px) {
+    width: 80%;
   }
 
   .stripe-card {
