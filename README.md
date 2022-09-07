@@ -11,7 +11,7 @@
 ## Sobre o projeto
 Aplicação de E-Commerce desenvolvido durante o curso [Stripe Payments with React & Node](https://www.youtube.com/watch?v=YTc0Zi70AjM), do canal Fullstackstudent do Youtube.<br />
 Desenvolvida em React, possui pagamentos por meio da plataforma __Stripe__.<br />
-Possui back-end em Node, com rota para criar sessão de checkout do Stripe.<br />
+Possui um back-end em Node, com uma única rota para criar sessão de checkout do Stripe.<br />
 
 
 ## :hammer_and_wrench: Tecnologias
@@ -22,7 +22,7 @@ Possui back-end em Node, com rota para criar sessão de checkout do Stripe.<br /
 * __Stripe__ para integração com plataforma de pagamentos
 
 ## :camera_flash: Screenshots
-![](https://github.com/luiizsilverio/my-magalu/blob/main/public/src/assets/my-magalu.gif)
+![](https://github.com/luiizsilverio/my-magalu/blob/main/src/assets/my-magalu.gif)
 
 
 ## :car: Iniciando a aplicação
